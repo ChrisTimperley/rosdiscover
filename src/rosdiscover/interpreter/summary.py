@@ -135,4 +135,4 @@ class SystemSummary(Mapping[str, NodeSummary]):
     @classmethod
     def from_dict(cls, arr: Collection[Any]) -> 'SystemSummary':
         summaries = [NodeSummary.from_dict(s) for s in arr]
-        return SystemSummary(node_to_summary={summary.name : summary for summary in summaries})
+        return SystemSummary(node_to_summary={summary.name: summary for summary in summaries})
